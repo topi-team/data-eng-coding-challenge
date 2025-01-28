@@ -1,0 +1,18 @@
+# Use coding_challenge/example user/password credentials
+services:
+
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: coding_challenge
+      POSTGRES_PASSWORD: example
+    ports:
+      - "5432:5432"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
