@@ -107,6 +107,50 @@ If everything is set up correctly, you should see a success message.
 
 ---
 
+
+## **Transform Raw Data into Models**
+
+### **Create dbt models for:**
+#### **Orders**:
+- Exclude all orders with a status of `"canceled"`.
+- Ensure `order_date` is properly formatted as a date.
+
+#### **Customers**:
+- Standardize customer names into a single field `full_name` (e.g., `John Doe`).
+
+---
+
+## **Aggregate Metrics**
+
+### **Create a dbt model to calculate the following metrics:**
+- **Total Revenue**: Sum of `total_amount` for all completed orders.
+- **Customer Lifetime Value (CLV)**:
+
+  $$
+  CLV=Average\ Purchase\ Value \times Purchase\ Frequency \times Customer\ Lifespan
+  $$
+
+- **Active Customers**: Customers with at least one completed order.
+
+### **Output Schema:**
+| customer_id | full_name | total_revenue | clv | active_status |
+| --- | --- | --- | --- | --- |
+| 1001 | John Doe | 150.50 | 150.50 | active |
+| 1002 | Jane Smith | 0.00 | 0.00 | inactive |
+
+---
+
+## **Consume Models**
+- Write a SQL query to fetch the **top 5 customers** by `total_revenue`.
+- Ensure the query is **optimized for performance** and explain the approach taken.
+
+---
+
+## **Document the Models**
+- Describe the **purpose** of each model.
+- Include **data lineage** and any **assumptions**.
+
+---
 ## ⚠️ Troubleshooting Common Errors
 
 <details>
