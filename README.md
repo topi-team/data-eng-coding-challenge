@@ -16,7 +16,9 @@ Before diving in, make sure you have the following installed:
 You'll need **Docker Compose** to run PostgreSQL locally.  
 Follow the official installation guide: [Docker Compose Installation](https://docs.docker.com/compose/install/)
 
-### 2️⃣ **Python Virtual Environment**
+<details>
+<summary>2️⃣ **Python Virtual Environment (Click to Expand)**</summary>
+
 We use **Pipenv** to manage dependencies.
 
 1. Install Pipenv:
@@ -33,6 +35,8 @@ We use **Pipenv** to manage dependencies.
    ```shell
    pipenv shell
    ```
+
+</details>
 
 ---
 
@@ -61,9 +65,9 @@ We’ve set up **Adminer** so you can explore the database with a user-friendly 
 
 ## 🔍 Validating Your Setup
 
-Before you start coding, ensure everything is working correctly with these checks:
+<details>
+<summary>✅ **1. Check if PostgreSQL is Running** (Click to Expand)</summary>
 
-### ✅ 1. Check if PostgreSQL is Running
 Run:
 ```shell
 docker ps
@@ -75,7 +79,11 @@ If it's not running, start it:
 docker compose up
 ```
 
-### ✅ 2. Connect to the Database
+</details>
+
+<details>
+<summary>✅ **2. Connect to the Database** (Click to Expand)</summary>
+
 To manually test the database connection, run:
 ```shell
 docker exec -it <container_id> psql -U coding_challenge -d coding_challenge
@@ -84,20 +92,26 @@ Replace `<container_id>` with the actual container ID from `docker ps`.
 
 Alternatively, open **Adminer** and check if the `coding_challenge` database is accessible.
 
-### ✅ 3. Run dbt Debug
+</details>
+
+<details>
+<summary>✅ **3. Run dbt Debug** (Click to Expand)</summary>
+
 Verify that **dbt** is installed and correctly configured:
 ```shell
 dbt debug
 ```
 If everything is set up correctly, you should see a success message.
 
+</details>
+
 ---
 
 ## ⚠️ Troubleshooting Common Errors
 
-If you run into any issues, here are some common problems and solutions:
+<details>
+<summary>❌ PostgreSQL Container Won't Start</summary>
 
-### ❌ PostgreSQL Container Won't Start
 **Error:**
 ```
 ERROR: database system is in recovery mode
@@ -108,8 +122,11 @@ Try restarting the container:
 docker compose down
 docker compose up --force-recreate
 ```
+</details>
 
-### ❌ Cannot Connect to Database
+<details>
+<summary>❌ Cannot Connect to Database</summary>
+
 **Error:**
 ```
 psql: could not connect to server: Connection refused
@@ -123,16 +140,22 @@ If it's not listed, start it:
 ```shell
 docker compose up -d
 ```
+</details>
 
-### ❌ dbt Debug Fails
+<details>
+<summary>❌ dbt Debug Fails</summary>
+
 **Error:**
 ```
 Database connection failed
 ```
 ✅ **Solution:**  
 Check your `profiles.yml` file for incorrect credentials. Ensure that dbt is using the correct database, schema, and user.
+</details>
 
-### ❌ Pipenv or venv Activation Issues
+<details>
+<summary>❌ Pipenv or venv Activation Issues</summary>
+
 **Error:**
 ```
 Command 'pipenv' not found
@@ -147,19 +170,24 @@ For **venv**, re-run:
 source env/bin/activate  # macOS/Linux  
 env\Scripts\activate     # Windows  
 ```
+</details>
 
 ---
 
 ## 📤 How to Submit Your Solution
 
-Once you’ve completed the challenge, follow these steps to submit your work:
+<details>
+<summary>1️⃣ **Ensure Your Code is Clean and Documented** (Click to Expand)</summary>
 
-### 1️⃣ **Ensure Your Code is Clean and Documented**
 - Format your code properly.
 - Add comments where necessary to explain key logic.
 - If applicable, include a `README.md` inside your submission with additional details on your approach.
 
-### 2️⃣ **Package Your Work**
+</details>
+
+<details>
+<summary>2️⃣ **Package Your Work** (Click to Expand)</summary>
+
 - If submitting via **ZIP file**:
     1. Remove unnecessary files (e.g., `__pycache__`, `.venv`).
     2. Create a zip archive of your project:
@@ -168,8 +196,14 @@ Once you’ve completed the challenge, follow these steps to submit your work:
        ```
     3. Send the zip file per email.
 
-### 3️⃣ **Provide Additional Context (Optional but Recommended)**
+</details>
+
+<details>
+<summary>3️⃣ **Provide Additional Context (Optional but Recommended)** (Click to Expand)</summary>
+
 If you made specific design choices, encountered challenges, or have insights into possible optimizations, include them in a `NOTES.md` file or a comment in your submission email/message.
+
+</details>
 
 ---
 
