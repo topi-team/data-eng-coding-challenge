@@ -1,0 +1,20 @@
+coding_challenge:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: coding_challenge
+      password: example
+      port: 5432
+      dbname: coding_challenge
+      schema: dbt_dev
+
+    prod:
+      type: postgres
+      host: localhost
+      user: coding_challenge
+      password: example
+      port: 5432
+      dbname: coding_challenge
+      schema: public
