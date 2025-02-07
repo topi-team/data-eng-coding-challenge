@@ -17,7 +17,7 @@ You'll need **Docker Compose** to run PostgreSQL locally.
 Follow the official installation guide: [Docker Compose Installation](https://docs.docker.com/compose/install/)
 
 ### 2️⃣ **Python Virtual Environment**
-You can use **Pipenv** or **venv** to manage dependencies. Pick your preferred method below:
+We use **Pipenv** to manage dependencies.
 
 1. Install Pipenv:
     - macOS (using Homebrew):
