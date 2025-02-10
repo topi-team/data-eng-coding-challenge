@@ -110,6 +110,10 @@ If everything is set up correctly, you should see a success message.
 
 ## **Transform Raw Data into Models**
 
+### Raw Data
+
+ - `orders` and `customers` raw data are stored in the seeds folder as CSV.
+
 ### **Create dbt models for:**
 #### **Orders**:
 - Exclude all orders with a status of `"canceled"`.
