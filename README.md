@@ -22,11 +22,9 @@ Follow the official installation guide: [Docker Compose Installation](https://do
 We use **Pipenv** to manage dependencies.
 
 1. Install Pipenv:
-    - macOS (using Homebrew):
-      ```shell
-      brew install pipenv
-      ```
-    - Other platforms: [Follow this guide](https://packaging.python.org/en/latest/tutorials/managing-dependencies/#installing-pipenv)
+  ```shell
+  pip install --user pipenv
+  ```
 2. Install dependencies:
    ```shell
    pipenv sync
