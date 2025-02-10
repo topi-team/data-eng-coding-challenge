@@ -54,7 +54,7 @@ order_id,customer_id,order_date,status,total_amount
 53,1004,2023-03-12,completed,63.93
 54,1004,2023-03-19,completed,219.28
 55,1004,2023-03-26,completed,431.76
-56,1004,2023-04-02,pending,260.27
+56,1004,2023-04-02,Canceled,260.27
 57,1004,2023-04-09,completed,118.83
 58,1004,2023-04-16,pending,175.43
 59,1004,2023-04-23,completed,168.37
@@ -77,7 +77,7 @@ order_id,customer_id,order_date,status,total_amount
 76,1006,2023-01-15,pending,299.54
 77,1006,2023-01-22,completed,18.13
 78,1006,2023-01-29,completed,120.98
-79,1006,2023-02-05,completed,95.44
+79,1006,2023-02-05,Canceled,95.44
 80,1006,2023-02-12,completed,199.5
 81,1006,2023-02-19,completed,77.39
 82,1006,2023-02-26,completed,65.6
@@ -184,5 +184,5 @@ order_id,customer_id,order_date,status,total_amount
 183,1014,2023-01-01,completed,439.96
 184,1014,2023-01-08,completed,403.71
 185,1014,2023-01-15,completed,96.95
-186,1014,2023-01-22,completed,405.35
+186,1014,2023-01-22,Canceled,405.35
 187,1014,2023-01-29,completed,212.18
