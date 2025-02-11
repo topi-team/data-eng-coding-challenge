@@ -1,4 +1,4 @@
-order_id,customer_id,order_date,status,total_amount
+order_id,customer_id,order_date,status,order_amount
 1,1001,2023/01/01,completed,152.7 EUR
 2,1001,2023/01/08,completed,78.35 EUR
 3,1001,2023/01/15,completed,189.52 EUR
